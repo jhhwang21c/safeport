@@ -5,8 +5,8 @@ import { Route, Routes } from 'react-router-dom';
 
 import Nav from './Nav';
 import Main from './pages/Main';
-import Marketplace from './pages/Marketplace';
-import Register from './pages/Register';
+import Marketplace from './pages/marketplace';
+import Register from './pages/register';
 import Claim from './pages/Claim';
 
 
