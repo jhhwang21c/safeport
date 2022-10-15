@@ -2,26 +2,20 @@ import React from "react";
 import { Box, Button, Flex, Image, Spacer } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/firestore';
-
 import './Nav.css'
-import Discord from "./assets/social-media-icons/discord.png";
-import Email from "./assets/social-media-icons/email_32x32.png";
-import Twitter from "./assets/social-media-icons/twitter_32x32.png";
+import Logo from "./assets/images/Logo.png";
 
 import { ethers } from 'ethers';
-import AcceptedNFT from './AcceptedNFT.json';
-import { FirebaseConfig } from "./firebase_config";
-import { doc, getDoc } from "firebase/firestore";
 
-const acceptedNFTAddress = process.env.REACT_APP_CONTRACT;
+//import AcceptedNFT from './AcceptedNFT.json';
 
-firebase.initializeApp(FirebaseConfig);
+//const acceptedNFTAddress = process.env.REACT_APP_CONTRACT;
 
-const firestore = firebase.firestore();
+//firebase.initializeApp(FirebaseConfig);
 
-const Nav = ({ accounts, setAccounts, member, signIn, profileImg, setImg, nickname, setNickname }) => {
+//const firestore = firebase.firestore();
+
+const Nav = ({ accounts, setAccounts }) => {
     const isConnected = Boolean(accounts[0]);
 
     async function connectAccount() {
@@ -34,11 +28,13 @@ const Nav = ({ accounts, setAccounts, member, signIn, profileImg, setImg, nickna
 
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             const signer = provider.getSigner();
+            /*
             const contract = new ethers.Contract(
                 acceptedNFTAddress,
                 AcceptedNFT.abi,
                 signer
             );
+            */
 
         }
     }
@@ -47,17 +43,13 @@ const Nav = ({ accounts, setAccounts, member, signIn, profileImg, setImg, nickna
         <div className="Nav">
             <Flex justify="space-between" align="center" backgroundColor="rgba(0,0,0,0.9)" height="90px">
                 {/* left side - social media icons */}
-                <Flex justify="space-around" width="30%" padding="0 75px">
-                    <a href="https://www.discord.com" target="_blank" rel="noreferrer">
-                        <Image src={Discord} boxSize="42px" margin="0 15px" />
-                    </a>
-                    <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
-                        <Image src={Twitter} boxSize="42px" margin="0 15px" />
-                    </a>
-                    <a href="https://www.gmail.com" target="_blank" rel="noreferrer">
-                        <Image src={Email} boxSize="42px" margin="0 15px" />
-                    </a>
-                </Flex>
+                
+                <Box marginLeft="60px">
+                <a href="" rel="noreferrer">
+                    <Image src={Logo} boxSize="42px" marginLeft="25px"/>
+                    SafePort
+                </a>
+                </Box>
 
                 {/* right side - website menu */}
                 <Flex justify="space-around" align="center" width="55%" padding="30px">
