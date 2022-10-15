@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { uploadFileToIPFS, uploadJSONToIPFS } from "../pinata";
-import SafePortNFT from '../SafePortNFT.json';
+
 import { Box, Button, Flex, Text, Center, Spacer, Input, Image } from "@chakra-ui/react";
+import SafePortNFT from '../SafePortNFT.json';
 
 
 export default function SellNFT () {

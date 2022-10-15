@@ -1,95 +1,95 @@
-import MarketplaceJSON from "../Marketplace.json";
+import SafePortNFT from '../SafePortNFT.json';
 import axios from "axios";
 import { useState } from "react";
-import NFTTile from "./NFTTile";
+import { useParams } from 'react-router-dom';
 
-export default function Profile () {
+import { Box, Button, Flex, Text, Center, Spacer, Input, Image } from "@chakra-ui/react";
+import NFTTile from "../NFTTile";
+
+import { Alchemy, Network } from "alchemy-sdk";
+
+export default function MyPage ({ accounts, setAccounts }) {
     const [data, updateData] = useState([]);
     const [dataFetched, updateFetched] = useState(false);
     const [address, updateAddress] = useState("0x");
     const [totalPrice, updateTotalPrice] = useState("0");
 
     async function getNFTData(tokenId) {
-        const ethers = require("ethers");
-        let sumPrice = 0;
-        //After adding your Hardhat network to your metamask, this code will get providers and signers
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner();
-        const addr = await signer.getAddress();
-
-        //Pull the deployed contract instance
-        let contract = new ethers.Contract(MarketplaceJSON.address, MarketplaceJSON.abi, signer)
-
         //create an NFT Token
-        let transaction = await contract.getMyNFTs()
+        
+        const config = {
+            apiKey: "TYLyZbwB20XtlVCG9cmQLN9Zbl8BWJfX",
+            network: Network.ETH_GOERLI,
+          };
+        const alchemy = new Alchemy(config);
+          
+        const nfts = await alchemy.nft.getNftsForOwner(accounts[0]);
+            // Print NFTs
+        console.log(nfts);
+
 
         /*
         * Below function takes the metadata from tokenURI and the data returned by getMyNFTs() contract function
         * and creates an object of information that is to be displayed
         */
         
-        const items = await Promise.all(transaction.map(async i => {
-            const tokenURI = await contract.tokenURI(i.tokenId);
-            let meta = await axios.get(tokenURI);
-            meta = meta.data;
+        const numNfts = nfts["totalCount"];
+        const nftList = nfts["ownedNfts"];
 
-            let price = ethers.utils.formatUnits(i.price.toString(), 'ether');
+        console.log(`Total NFTs owned by ${accounts[0]}: ${numNfts} \n`);
+
+        const items = nftList.map((i) => {
+
             let item = {
-                price,
-                tokenId: i.tokenId.toNumber(),
-                seller: i.seller,
-                owner: i.owner,
-                image: meta.image,
-                name: meta.name,
-                description: meta.description,
+                tokenId: i.tokenId,
+                image: i.media[0].raw,
+                title: i.title,
+                description: i.description,
             }
-            sumPrice += Number(price);
             return item;
-        }))
+        }
+        )
 
         updateData(items);
         updateFetched(true);
-        updateAddress(addr);
-        updateTotalPrice(sumPrice.toPrecision(3));
+        updateAddress(accounts[0]);
     }
 
-    const params = useParams();
-    const tokenId = params.tokenId;
     if(!dataFetched)
-        getNFTData(tokenId);
+        getNFTData();
 
     return (
-        <div className="profileClass" style={{"min-height":"100vh"}}>
-            <Navbar></Navbar>
-            <div className="profileClass">
-            <div className="flex text-center flex-col mt-11 md:text-2xl text-white">
-                <div className="mb-5">
-                    <h2 className="font-bold">Wallet Address</h2>  
+
+        <Center>
+        <Flex bg="rgba(0,0,0,0.2)"
+        borderRadius="30px"
+        w="70%"
+        marginTop="140px"
+        marginBottom="70px"
+        paddingBottom="30px"
+        height="500px"
+        flexDirection="column"
+        justify="center"
+        align="center">
+            <div className="mb-5">
+                    <h2 >Wallet Address</h2>  
                     {address}
                 </div>
-            </div>
-            <div className="flex flex-row text-center justify-center mt-10 md:text-2xl text-white">
-                    <div>
-                        <h2 className="font-bold">No. of NFTs</h2>
+                    <Flex>
+                        <h2 >No. of NFTs: </h2>
                         {data.length}
-                    </div>
-                    <div className="ml-20">
-                        <h2 className="font-bold">Total Value</h2>
-                        {totalPrice} ETH
-                    </div>
-            </div>
-            <div className="flex flex-col text-center items-center mt-11 text-white">
-                <h2 className="font-bold">Your NFTs</h2>
-                <div className="flex justify-center flex-wrap max-w-screen-xl">
+                    </Flex>
+                <h2 >Your NFTs</h2>
+                <Flex align="center">
                     {data.map((value, index) => {
                     return <NFTTile data={value} key={index}></NFTTile>;
                     })}
-                </div>
-                <div className="mt-10 text-xl">
+                </Flex>
+                <div>
                     {data.length == 0 ? "Oops, No NFT data to display (Are you logged in?)":""}
                 </div>
-            </div>
-            </div>
-        </div>
+        </Flex>
+        </Center>
+
     )
 };
