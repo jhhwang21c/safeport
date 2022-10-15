@@ -1,18 +1,13 @@
 import {
   Box,
   Button,
-  Flex,
   Text,
   Center,
-  Spacer,
-  Input,
   Image,
-  Stack,
   SimpleGrid,
   VStack,
   IconButton,
   Link,
-  HStack,
 } from "@chakra-ui/react";
 import { ethers, BigNumber } from "ethers";
 
