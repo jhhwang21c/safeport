@@ -52,10 +52,10 @@ const Nav = ({ accounts, setAccounts }) => {
         {/* left side - social media icons */}
 
         <Box marginLeft="60px">
-          <a href="" rel="noreferrer">
+          <Link to="/pages/Main" rel="noreferrer">
             <Image src={Logo} boxSize="42px" marginLeft="25px" />
             SafePort
-          </a>
+          </Link>
         </Box>
         <InputGroup marginLeft="60px">
           <InputLeftElement
@@ -76,7 +76,7 @@ const Nav = ({ accounts, setAccounts }) => {
         <Flex justify="space-around" align="center" width="55%" padding="30px">
           <Box margin="0 15px">
             <Link
-              to="/"
+              to="/pages/Register"
               style={{
                 textDecoration: "none",
                 color: "white",
@@ -89,7 +89,7 @@ const Nav = ({ accounts, setAccounts }) => {
           <Spacer />
           <Box margin="0 15px">
           <Link
-              to="/"
+              to="/pages/Claim"
               style={{
                 textDecoration: "none",
                 color: "white",
@@ -102,7 +102,7 @@ const Nav = ({ accounts, setAccounts }) => {
           <Spacer />
           <Box margin="0 15px">
             <Link
-              to="/"
+              to="/pages/Marketplace"
               style={{
                 textDecoration: "none",
                 color: "white",

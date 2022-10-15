@@ -2,14 +2,14 @@ import { Box, Button, Flex, Text, Center, Spacer, Input, Image } from "@chakra-u
 import { ethers, BigNumber } from "ethers";
 
 
-const Marketplace = ({ accounts, setAccounts }) => {
+const Claim = ({ accounts, setAccounts }) => {
     const isConnected = Boolean(accounts[0]);
 
     return (
         <Center>
-            <Box marginTop="200px"><Text textColor="black">Marketplace page</Text></Box>
+            <Box marginTop="200px"><Text textColor="black">Claim page</Text></Box>
         </Center>
     );
 };
 
-export default Marketplace;
+export default Claim;
