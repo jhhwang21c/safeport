@@ -94,30 +94,31 @@ export default function SellNFT () {
         paddingBottom="30px"
         height="500px"
         flexDirection="column"
-        justify="center">
+        justify="center"
+        align="center">
+            <Text fontSize="30px">For staffs</Text>
             <Input
                 value={ownerAddress} onChange={(e) => setOwnerAddress(e.target.value)}
-                placeholder='Owner Address'
-                size='md'
+                placeholder='Owner Wallet Address'
+                size='md' width="60%" marginTop="20px"
             />
             <Input
                 onChange={e => updateFormParams({...formParams, name: e.target.value})} value={formParams.name}
                 placeholder='Name'
-                size='md'
+                size='md' width="60%" marginTop="20px"
             />
             <Input
                 onChange={e => updateFormParams({...formParams, description: e.target.value})} value={formParams.description}
                 placeholder='Description'
-                size='md'
+                size='md' width="60%" marginTop="20px"
             />
             
-                <div>
-                    <label htmlFor="image">Upload Image</label>
+                <Box fontSize="15px" marginTop="20px">
                     <input type={"file"} onChange={OnChangeFile}></input>
-                </div>
+                </Box>
                 
-                <Button onClick={listNFT}>
-                    List NFT
+                <Button onClick={listNFT} marginTop="20px" color="green">
+                    Mint
                 </Button>
         </Flex>
         </Center>

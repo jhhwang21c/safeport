@@ -5,15 +5,14 @@ import { Box, Button, Flex, Text, Center, Spacer, Input, Image, Stack } from "@c
 function NFTTile (data) {
     
     return (
-        <Box boxSize="200px">
-        <Stack>
+        <Flex flexDirection="column" align="center" width="200px" marginTop="40px" marginLeft="20px">
             <Image boxSize='150px' src={data.data.image} alt="" />
-            <Text>{data.data.title}</Text>
-            <Text>
+            <Text fontSize="20px" letterSpacing="-5.5%">{data.data.title}</Text>
+            <Text fontSize="15px" letterSpacing="-5.5%">
                 {data.data.description}
             </Text>
-        </Stack>
-        </Box>
+            <Button marginTop="20px" color="green">Claim</Button>
+        </Flex>
     )
 }
 

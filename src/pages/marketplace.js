@@ -22,12 +22,12 @@ const Marketplace = ({ accounts, setAccounts }) => {
           <Box marginTop="20px">
             <SimpleGrid columns={2} spacing={100}>
               <VStack>
-                <Button colorScheme="blue">1. Chateau Margaux 1787</Button>
-                <Button colorScheme="blue">4. Chateau Cheval Blanc 1947</Button>
+                <Button colorScheme="blue">1. 1787 Chateau Margaux </Button>
+                <Button colorScheme="blue">2. 1947 Chateau Cheval Blanc </Button>
               </VStack>
               <VStack>
-                <Button colorScheme="blue">1. Chateau Margaux 1787</Button>
-                <Button colorScheme="blue">4. Chateau Cheval Blanc 1947</Button>
+                <Button colorScheme="blue">3. Catena Zapata Estiba Reservada</Button>
+                <Button colorScheme="blue">4. 1992 Screaming Eagle</Button>
               </VStack>
             </SimpleGrid>
           </Box>

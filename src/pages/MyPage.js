@@ -71,12 +71,11 @@ export default function MyPage ({ accounts, setAccounts }) {
         flexDirection="column"
         justify="center"
         align="center">
-            <div className="mb-5">
-                    <h2 >Wallet Address</h2>  
+            <Flex>
                     {address}
-                </div>
+                </Flex>
                     <Flex>
-                        <h2 >No. of NFTs: </h2>
+                        <h2 >No. of NFTs: &nbsp;</h2>
                         {data.length}
                     </Flex>
                 <h2 >Your NFTs</h2>

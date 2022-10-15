@@ -74,6 +74,19 @@ const Nav = ({ accounts, setAccounts }) => {
 
         {/* right side - website menu */}
         <Flex justify="space-around" align="center" width="55%" padding="30px">
+        <Box margin="0 15px">
+            <Link
+              to="/pages/CreateNFT"
+              style={{
+                textDecoration: "none",
+                color: "white",
+                fontSize: "25px",
+              }}
+            >
+              (mint)
+            </Link>
+          </Box>
+          <Spacer />
           <Box margin="0 15px">
             <Link
               to="/pages/Register"
@@ -89,7 +102,7 @@ const Nav = ({ accounts, setAccounts }) => {
           <Spacer />
           <Box margin="0 15px">
           <Link
-              to="/pages/Claim"
+              to="/pages/MyPage"
               style={{
                 textDecoration: "none",
                 color: "white",
