@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+@import url("https://fonts.googleapis.com/css?family=VT323");
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Ubuntu&display=swap');
+
+.App {
+  text-align: center;
+  font-family: 'Ubuntu', 'Ibarra Real Nova';
+  font-size: 24px;
+  color: white;
+}
+
+body {
+  overflow: scroll;
+}
