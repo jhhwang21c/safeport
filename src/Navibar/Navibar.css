@@ -1,0 +1,103 @@
+.navibar-2 {
+  align-items: center;
+  background-color: var(--alto);
+  border: 1px none;
+  display: flex;
+  gap: 33px;
+  height: 118px;
+  margin-left: 1.0px;
+  min-width: 1441px;
+  padding: 0 23px;
+}
+
+.logo-2 {
+  height: 80px;
+  width: 96px;
+}
+
+.safe-port-2 {
+  letter-spacing: 0;
+  margin-bottom: 2.0px;
+  min-height: 45px;
+  min-width: 153px;
+}
+
+.search-container-2 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 25px;
+  display: flex;
+  gap: 9px;
+  height: 53px;
+  min-width: 434px;
+  padding: 0 12px;
+}
+
+.icon-search-2 {
+  height: 39px;
+  object-fit: cover;
+  width: 39px;
+}
+
+.search-items-collections-and-wallets-2 {
+  letter-spacing: 0;
+  margin-bottom: 1.0px;
+  min-height: 24px;
+  min-width: 354px;
+}
+
+.place-2 {
+  letter-spacing: 0;
+  margin-bottom: 2.0px;
+  min-height: 36px;
+  min-width: 117px;
+}
+
+.claim-2 {
+  letter-spacing: 0;
+  margin-bottom: 2.0px;
+  min-height: 36px;
+  min-width: 80px;
+}
+
+.explore-2 {
+  letter-spacing: 0;
+  margin-bottom: 2.0px;
+  min-height: 36px;
+  min-width: 106px;
+}
+
+.connect-wallet-2 {
+  align-items: flex-start;
+  background-color: var(--forest-green);
+  border: 1px none;
+  border-radius: 25px;
+  display: flex;
+  height: 61px;
+  min-width: 211px;
+  padding: 15px 56px;
+}
+
+.my-page-2 {
+  letter-spacing: 0;
+  min-height: 29px;
+  min-width: 99px;
+  text-align: center;
+}
+
+.navibar-2.navibar-3,
+.navibar-2.navibar-4,
+.navibar-2.navibar-7,
+.navibar-2.navibar-8,
+.navibar-2.navibar-9 {
+  margin-left: unset;
+}
+
+.navibar-2.navibar,
+.navibar-2.navibar-1 {
+  left: 0;
+  margin-left: unset;
+  position: absolute;
+  top: 0;
+}
+
