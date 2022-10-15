@@ -8,6 +8,7 @@ import Main from './pages/Main';
 import Marketplace from './pages/Marketplace';
 import Register from './pages/Register';
 import Claim from './pages/Claim';
+import CreateNFT from './pages/CreateNFT';
 
 
 function App() {
@@ -21,6 +22,12 @@ function App() {
       
 
       <Routes>
+      <Route path='/pages/CreateNFT'
+          element={
+            <CreateNFT
+              accounts={accounts} setAccounts={setAccounts}
+            />}
+        />
       <Route path='/pages/Marketplace'
           element={
             <Marketplace

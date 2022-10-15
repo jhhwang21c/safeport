@@ -67,19 +67,19 @@ contract SafePortNFT is ERC721URIStorage {
     }
 
     //The first time a token is created, it is listed here
-    function createToken(string memory tokenURI, uint256 price, address user_) public payable returns (uint) {
+    function createToken(string memory tokenURI, address user_) public payable returns (uint) {
         //Increment the tokenId counter, which is keeping track of the number of minted NFTs
         _tokenIds.increment();
         uint256 newTokenId = _tokenIds.current();
 
-        //Mint the NFT with tokenId newTokenId to the address who called createToken
+        //Mint the NFT with tokenId newTokenId to the address
         _safeMint(user_, newTokenId);
 
         //Map the tokenId to the tokenURI (which is an IPFS URL with the NFT metadata)
         _setTokenURI(newTokenId, tokenURI);
 
         //Helper function to update Global variables and emit an event
-        createListedToken(newTokenId, price);
+        //createListedToken(newTokenId, price);
 
         return newTokenId;
     }
