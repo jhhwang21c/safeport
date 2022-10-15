@@ -7,7 +7,9 @@ const Claim = ({ accounts, setAccounts }) => {
 
     return (
         <Center>
-            <Box marginTop="200px"><Text textColor="black">Claim page</Text></Box>
+            <Box marginTop="200px">
+                <Text textColor="black">Claim page</Text>
+            </Box>
         </Center>
     );
 };
