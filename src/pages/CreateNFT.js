@@ -86,7 +86,7 @@ export default function SellNFT () {
 
     return (
         <Center>
-        <Flex bg="rgba(0,0,0,0.2)"
+        <Flex 
         borderRadius="30px"
         w="70%"
         marginTop="140px"
@@ -96,7 +96,7 @@ export default function SellNFT () {
         flexDirection="column"
         justify="center"
         align="center">
-            <Text fontSize="30px">For staffs</Text>
+            <Text fontSize="30px" color="black">For staffs</Text>
             <Input
                 value={ownerAddress} onChange={(e) => setOwnerAddress(e.target.value)}
                 placeholder='Owner Wallet Address'
@@ -113,7 +113,7 @@ export default function SellNFT () {
                 size='md' width="60%" marginTop="20px"
             />
             
-                <Box fontSize="15px" marginTop="20px">
+                <Box fontSize="15px" marginTop="20px" color="black">
                     <input type={"file"} onChange={OnChangeFile}></input>
                 </Box>
                 
