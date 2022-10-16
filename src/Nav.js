@@ -31,13 +31,7 @@ const Nav = ({ accounts, setAccounts }) => {
 
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
-      /*
-            const contract = new ethers.Contract(
-                acceptedNFTAddress,
-                AcceptedNFT.abi,
-                signer
-            );
-            */
+      
     }
   }
 
@@ -66,7 +60,7 @@ const Nav = ({ accounts, setAccounts }) => {
             value={value}
             onChange={handleChange}
             placeholder="Search Items, Collections, and Wallets"
-            width="60%"
+            width="90%"
             size="md"
             borderRadius="20px"
           />
