@@ -126,6 +126,19 @@ const Nav = ({ accounts, setAccounts }) => {
             </Link>
           </Box>
           <Spacer />
+          <Box margin="0 15px">
+            <Link
+              to="/pages/Museum"
+              style={{
+                textDecoration: "none",
+                color: "white",
+                fontSize: "25px",
+              }}
+            >
+              Museum
+            </Link>
+          </Box>
+
 
           {/* connect */}
           {isConnected ? (
