@@ -37,7 +37,7 @@ function App() {
         <Route
           path="/pages/CreateNFT"
           element={
-            <ParisMuseum accounts={accounts} setAccounts={setAccounts} />
+            <CreateNFT accounts={accounts} setAccounts={setAccounts} />
           }
         />
 
