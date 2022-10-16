@@ -13,7 +13,7 @@ const Main = ({ accounts, setAccounts }) => {
                 <Flex
                     bg="rgba(0,0,0,0.5)"
                     borderRadius="30px"
-                    w="70%"
+                    w="80%"
                     marginTop="70px"
                     marginBottom="70px"
                     paddingBottom="30px"
@@ -25,7 +25,7 @@ const Main = ({ accounts, setAccounts }) => {
                         SafePort
                     </Text>
                     <Text
-                        fontSize="40px"
+                        fontSize="35px"
                         letterSpacing="-5.5%"
                         fontFamily="Ubuntu"
                         textShadow="0 2px 2px #000000"

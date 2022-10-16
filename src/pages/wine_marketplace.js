@@ -14,6 +14,7 @@ import {
   RangeSliderFilledTrack,
   RangeSliderThumb,
   Heading,
+  Checkbox,
 } from "@chakra-ui/react";
 import { ethers, BigNumber } from "ethers";
 
@@ -24,10 +25,19 @@ const WineMarketplace = ({ accounts, setAccounts }) => {
     <Box marginTop="200px">
       <HStack spacing="100px">
         <Box />
-        <VStack spacing="100px">
-          <Text textColor="black">Filter</Text>
-          <Text textColor="black">Status</Text>
-          <Select placeholder="Sort Option" textColor="black" fontSize="lg">
+        <VStack spacing="20px">
+          <Text as="u" textColor="black" fontSize="30px">
+            Filter
+          </Text>
+          <Checkbox color="black" size="lg" colorScheme="green" defaultChecked>
+            Availability
+          </Checkbox>
+          <Select
+            placeholder="Sort Option"
+            textColor="black"
+            fontSize="lg"
+            width="150px"
+          >
             <option value="option1">Sort by Price</option>
             <option value="option2">Sort by Popularity</option>
             <option value="option3">Sort by Release Date</option>
