@@ -29,7 +29,7 @@ const Main = ({ accounts, setAccounts }) => {
           flexDirection="column"
           justify="center"
         >
-          <Text fontSize="50px" fontFamily="Ubuntu" textShadow="0 3px #000000">
+          <Text fontSize="50px" fontFamily="Ubuntu" textShadow="0 3px #000000" color="white">
             SafePort.
           </Text>
           <Text
@@ -48,6 +48,7 @@ const Main = ({ accounts, setAccounts }) => {
             fontFamily="Ubuntu"
             textShadow="0 2px 2px #000000"
             marginTop="50px"
+            color="white"
           >
             How it works
           </Text>
@@ -55,6 +56,7 @@ const Main = ({ accounts, setAccounts }) => {
             fontSize="30px"
             letterSpacing="-5.5%"
             textShadow="0 2px 2px #000000"
+            color="white"
           >
             1. Register your item on our site
           </Text>
@@ -62,6 +64,7 @@ const Main = ({ accounts, setAccounts }) => {
             fontSize="30px"
             letterSpacing="-5.5%"
             textShadow="0 2px 2px #000000"
+            color="white"
           >
             2. Send your physical item to our warehouse freeport
           </Text>
@@ -69,6 +72,7 @@ const Main = ({ accounts, setAccounts }) => {
             fontSize="30px"
             letterSpacing="-5.5%"
             textShadow="0 2px 2px #000000"
+            color="white"
           >
             3. Upon receipt of the item, you will be airdropped an NFT which you
             can freely trade, auction, or fractionalize
@@ -85,7 +89,7 @@ const Main = ({ accounts, setAccounts }) => {
           flexDirection="column"
           justify="center"
         >
-          <Text fontSize="40px" fontFamily="Ubuntu" textShadow="0 3px #000000">
+          <Text fontSize="40px" fontFamily="Ubuntu" textShadow="0 3px #000000" color="white">
             With SafePort, you can access unparalleled liquidity and safekeeping
             of your physical items by storing them as an NFT.
           </Text>
@@ -95,6 +99,7 @@ const Main = ({ accounts, setAccounts }) => {
             letterSpacing="-5.5%"
             textShadow="0 2px 2px #000000"
             marginTop="20px"
+            color="white"
           >
             Storing an item with SafePort is simple. First, you connect your
             wallet, register, and send in an item to one of our physical
@@ -114,6 +119,7 @@ const Main = ({ accounts, setAccounts }) => {
             letterSpacing="-5.5%"
             textShadow="0 2px 2px #000000"
             marginTop="20px"
+            color="white"
           >
             - You can trade or transfer your item 24/7 in our decentralized
             marketplace{" "}
@@ -123,6 +129,7 @@ const Main = ({ accounts, setAccounts }) => {
             letterSpacing="-5.5%"
             textShadow="0 2px 2px #000000"
             marginTop="20px"
+            color="white"
           >
             - You can track the item's providence and ownership over time by
             tracing public transactions on the blockchain
@@ -132,6 +139,7 @@ const Main = ({ accounts, setAccounts }) => {
             letterSpacing="-5.5%"
             textShadow="0 2px 2px #000000"
             marginTop="20px"
+            color="white"
           >
             - You can put your item down as collateral to apply for loans on-chain
           </Text>
@@ -140,6 +148,7 @@ const Main = ({ accounts, setAccounts }) => {
             letterSpacing="-5.5%"
             textShadow="0 2px 2px #000000"
             marginTop="20px"
+            color="white"
           >
             - You can fractionalize your item into fungible tokens and allow
             others to invest and share in its upside, especially if your item
@@ -150,6 +159,7 @@ const Main = ({ accounts, setAccounts }) => {
             letterSpacing="-5.5%"
             textShadow="0 2px 2px #000000"
             marginTop="20px"
+            color="white"
           >
             - You can lend your item to our partner museums to receive passive
             ticketing revenue.

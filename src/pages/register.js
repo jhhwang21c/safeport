@@ -103,10 +103,10 @@ export default function Register() {
         <Text fontSize="20px" textColor="black" letterSpacing="-5.5%">Shipping address 2: ABC at SWAG street, ROK</Text>
         <Text fontSize="20px" textColor="black" letterSpacing="-5.5%">
           Include a QR code, ENS, or full wallet address in your shipped item
-          alongside a ceriticate of authenticity. Upon receipt, you will be
-          minted an NFT of your item
+          alongside a certificate of authenticity. Upon receipt, you will be
+          airdropped an NFT of your item
         </Text>
-        <Button onClick={register} marginTop="20px" color="green">
+        <Button onClick={()=>(alert("success"))} marginTop="20px" color="green">
           Register
         </Button>
       </Flex>

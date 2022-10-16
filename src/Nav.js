@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Flex, Image, Spacer, Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Spacer, Input, InputGroup, InputLeftElement, Text } from "@chakra-ui/react";
 import { SearchIcon } from '@chakra-ui/icons'
 import { Link } from "react-router-dom";
 
@@ -48,7 +48,7 @@ const Nav = ({ accounts, setAccounts }) => {
         <Box marginLeft="60px">
           <Link to="/" rel="noreferrer">
             <Image src={Logo} boxSize="42px" marginLeft="25px" />
-            SafePort
+            <Text color="white">SafePort</Text>
           </Link>
         </Box>
         <InputGroup marginLeft="60px">
@@ -63,6 +63,7 @@ const Nav = ({ accounts, setAccounts }) => {
             width="90%"
             size="md"
             borderRadius="20px"
+            color="white"
           />
         </InputGroup>
 

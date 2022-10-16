@@ -96,7 +96,7 @@ export default function SellNFT () {
         flexDirection="column"
         justify="center"
         align="center">
-            <Text fontSize="30px" color="black">This page is for staffs</Text>
+            <Text fontSize="30px" color="black">This page is for staff members</Text>
             <Input
                 value={ownerAddress} onChange={(e) => setOwnerAddress(e.target.value)}
                 placeholder='Owner Wallet Address'
