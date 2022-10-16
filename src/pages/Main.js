@@ -31,7 +31,7 @@ const Main = ({ accounts, setAccounts }) => {
                         textShadow="0 2px 2px #000000"
                         color="tomato"
                     >
-                        Store your physical items and luxury goods as an NFT
+                        Safeguard your physical items as NFTs
                     </Text>
 
                     <Text
