@@ -1,7 +1,5 @@
 import SafePortNFT from '../SafePortNFT.json';
-import axios from "axios";
 import { useState } from "react";
-import { useParams } from 'react-router-dom';
 
 import { Box, Button, Flex, Text, Center, Spacer, Input, Image } from "@chakra-ui/react";
 import NFTTile from "../NFTTile";
@@ -22,7 +20,6 @@ export default function MyPage ({ accounts, setAccounts }) {
             network: Network.ETH_GOERLI,
           };
         const alchemy = new Alchemy(config);
-          
         const nfts = await alchemy.nft.getNftsForOwner(accounts[0]);
             // Print NFTs
         console.log(nfts);
@@ -72,13 +69,12 @@ export default function MyPage ({ accounts, setAccounts }) {
         justify="center"
         align="center">
             <Flex>
-                    {address}
+                    Wallet Address: {address}
                 </Flex>
                     <Flex>
-                        <h2 >No. of NFTs: &nbsp;</h2>
+                        <h2 >Number of NFTs: &nbsp;</h2>
                         {data.length}
                     </Flex>
-                <h2 >Your NFTs</h2>
                 <Flex align="center">
                     {data.map((value, index) => {
                     return <NFTTile data={value} key={index}></NFTTile>;
