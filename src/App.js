@@ -76,7 +76,7 @@ function App() {
         />
 
         <Route
-          path="/pages/Main"
+          path="/"
           element={<Main accounts={accounts} setAccounts={setAccounts} />}
         />
       </Routes>

@@ -52,7 +52,7 @@ const Nav = ({ accounts, setAccounts }) => {
         {/* left side - social media icons */}
 
         <Box marginLeft="60px">
-          <Link to="/pages/Main" rel="noreferrer">
+          <Link to="/" rel="noreferrer">
             <Image src={Logo} boxSize="42px" marginLeft="25px" />
             SafePort
           </Link>
