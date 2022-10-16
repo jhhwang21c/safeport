@@ -8,7 +8,6 @@ import {
   Divider,
   Link
 } from "@chakra-ui/react";
-import { ethers, BigNumber } from "ethers";
 
 const Museum = ({ accounts, setAccounts }) => {
   const isConnected = Boolean(accounts[0]);

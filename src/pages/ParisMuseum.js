@@ -1,35 +1,18 @@
 import {
-  Flex,
-  Box,
-  Text,
-  Center,
-  Image,
-  VStack,
-  Select,
-  HStack,
-  Button,
-  useToast,
-  Portal,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverHeader,
-  PopoverBody,
-  PopoverFooter,
-  PopoverArrow,
-  PopoverCloseButton,
-} from "@chakra-ui/react";
+  Flex,  Box,  Text,  Center,  Image,  VStack,  Select,  HStack,
+  Button,  useToast,  Portal,  Popover,  PopoverTrigger,
+  PopoverContent,  PopoverHeader,  PopoverBody,  PopoverFooter,
+  PopoverArrow,  PopoverCloseButton,} from "@chakra-ui/react";
 import NFTChoose from "../NFTChoose";
 import { Alchemy, Network } from "alchemy-sdk";
 import { useState } from "react";
 
 const ParisMuseum = ({ accounts, setAccounts }) => {
-  const isConnected = Boolean(accounts[0]);
-  const toast = useToast();
+
 
   const [data, updateData] = useState([]);
   const [dataFetched, updateFetched] = useState(false);
-  const [address, updateAddress] = useState("0x");
+  const toast = useToast();
 
   async function getNFTData(tokenId) {
     //create an NFT Token
@@ -66,7 +49,6 @@ const ParisMuseum = ({ accounts, setAccounts }) => {
 
     updateData(items);
     updateFetched(true);
-    updateAddress(accounts[0]);
   }
 
   if (!dataFetched) getNFTData();
