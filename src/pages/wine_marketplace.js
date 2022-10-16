@@ -13,7 +13,6 @@ import {
   RangeSliderTrack,
   RangeSliderFilledTrack,
   RangeSliderThumb,
-  Heading,
   Checkbox,
 } from "@chakra-ui/react";
 import { ethers, BigNumber } from "ethers";
